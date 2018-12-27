@@ -6,11 +6,15 @@ export class Counter extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="mt-4 ml-3">
         <span>{this.state.count}</span>
         <button className="btn btn-primary ml-3">Test</button>
+        <h3>{this.checkCount()}</h3>
       </div>
     );
+  }
+  checkCount() {
+    return this.state.count > 0 ? "Greate than zero" : <button>zero</button>;
   }
 }
 export default Counter;
